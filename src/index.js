@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import {PatientsList} from './containers/PatientsList';
+import {AddPatient} from './containers/AddPatient';
 
 const store = configureStore();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <Route path="/" exact component={PatientsList} />
+        <Route path="/" exact component={AddPatient} />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
