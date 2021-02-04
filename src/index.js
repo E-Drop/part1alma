@@ -13,7 +13,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <Route path="/" exact component={AddPatient} />
+        <Route path="/" exact component={PatientsList} />
+        <Route path="/add" component={AddPatient} />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
