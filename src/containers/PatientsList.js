@@ -1,19 +1,22 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import allActions from '../actions';
 import { Patient } from '../components/Patient';
-import './styles/PatientsList.scss';
+import './styles/patientsList.scss';
 
 export const PatientsList = ({history}) => {
   const patients = useSelector(state => state.patients.patientsList);
 
   return (
-    <div className="PatientsListContainer">
-
-      {patients.length ? patients.map((x, key) => <Patient key={key} patient={x} />) : 'no patients'}
-      <button onClick={() => {
-        history.push('/add');
-      }}>Add Patient</button>
+    <div className="patients-list">
+      <div className="patients-list-container">
+        <div className="patients-list-header">
+        <div>Id</div><div>Name</div><div>Last Name</div><div>Birth Date</div><div>Delete</div>
+        </div>
+        <div className="patients-list-content">
+        {patients.length ? patients.map((x, key) => <Patient key={key} patient={x} />) : <div className="patients-list-content-empty">no patients</div>}
+        </div>
+        <button onClick={() => { history.push('/add');}}>+</button>
+      </div>
     </div>
   );
 }

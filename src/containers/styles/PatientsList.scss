@@ -1,5 +1,46 @@
-div {
+.patients-list {
+  display: flex;
+  justify-content: center;
+  &-container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding-bottom: 50px;
+  }
+  &-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #2299e2;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    div {
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &-content {
+    padding: 50px 0;
+    width: 100%;
+    min-height: 50vh;
+    &-empty {
+      padding: 20px;
+      text-align: center;
+    }
+  }
   button {
     border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    background: #9ec438;
+    border: 1px solid #f7a01f;
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 0 0 #f7a01f, -1px 0 0 #f7a01f, 0 1px 0 #f7a01f, 0 -1px 0 #f7a01f, 1px 1px #f7a01f, -1px -1px 0 #f7a01f, 1px -1px 0 #f7a01f, -1px 1px 0 #f7a01f;
   }
 }

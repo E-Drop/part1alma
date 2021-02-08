@@ -1,5 +1,16 @@
-div {
-  button {
-    border-radius: 50px;
+.inputField{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 10px 5%;
+  input {
+    height: 25px;
+  }
+  div {
+    font-size: 9px;
+    color: red;
+    button {
+      border-radius: 50px;
+    }
   }
 }

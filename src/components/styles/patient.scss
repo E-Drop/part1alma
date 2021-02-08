@@ -1,0 +1,13 @@
+.patient {
+  padding:0;
+  display: flex;
+  justify-content: space-between;
+  div {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    &:last-child {
+      cursor:pointer;
+    }
+  }
+}

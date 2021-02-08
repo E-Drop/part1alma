@@ -7,11 +7,13 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import {PatientsList} from './containers/PatientsList';
 import {AddPatient} from './containers/AddPatient';
+import {Banner} from './components/Banner';
 
 const store = configureStore();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <Banner/>
       <BrowserRouter>
         <Route path="/" exact component={PatientsList} />
         <Route path="/add" component={AddPatient} />
